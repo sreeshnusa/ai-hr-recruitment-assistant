@@ -1,95 +1,99 @@
-# 🤖 Agentic AI HR Recruitment Assistant
+# AI HR Recruitment Assistant
 
-An intelligent, multi-agent candidate screening platform that automates resume parsing, calculates job-match scores, highlights skill gaps, and generates candidate-tailored technical and HR interview questions in seconds.
-
----
-
-## 🌟 Key Features
-
-- **📄 Privacy-First Resume Parsing**: Uses `pdf.js` to extract text directly in the browser memory—no resume files are stored on external servers.
-- **🎯 Algorithmic Match Scoring**: Computes an objective candidate match percentage (0–100%) against job descriptions.
-- **🏷️ Skill Gap Visualizer**: Displays side-by-side color-coded badges for **Matched Skills** (Green) and **Missing Skills** (Red).
-- **🤖 Autonomous Multi-Agent Pipeline**:
-  - **Agent 1 (Parser Agent)**: Extracts candidate identity and clean resume text.
-  - **Agent 2 (Skill Matcher)**: Cross-references skills against a 60+ technical tool taxonomy.
-  - **Agent 3 (Evaluator Agent)**: Calculates match scores, strengths, and weaknesses.
-  - **Agent 4 (Interview Specialist)**: Generates candidate-tailored technical and HR questions.
-- **⚡ Dual Engine Architecture**: Leverages **Google Gemini 1.5 Flash API** for deep semantic analysis, with an **Offline Heuristic Engine** backup ensuring 100% uptime.
-- **📊 Executive Summaries & Recommendations**: Categorizes applicants as *Strong Hire*, *Hire*, *Consider*, or *Do Not Hire*.
+An automated candidate evaluation platform designed to streamline initial recruitment screening by parsing resumes, matching candidate skills against job descriptions, calculating match scores, and generating tailored interview questions.
 
 ---
 
-## 🛠️ Tech Stack
+## Overview
 
-- **Frontend**: HTML5, CSS3 (Modern Flexbox/Grid), Vanilla JavaScript (ES6+)
-- **Document Parsing**: PDF.js (Browser-based text extraction)
-- **AI Integration**: Google Gemini 1.5 Flash REST API
-- **Python Alternative**: Streamlit, PyPDF (`app.py`)
+Recruiters and hiring managers spend significant time manually reviewing resumes against complex job specifications. The AI HR Recruitment Assistant automates this initial evaluation phase using a hybrid architecture that combines client-side document parsing with AI-based semantic evaluation and a local rule-based fallback engine.
+
+The application allows HR teams to upload candidate resumes in PDF or plain text format, paste a target job description, and receive an instant breakdown of candidate suitability.
 
 ---
 
-## 🚀 Getting Started
+## Key Features
 
-### Option 1: Web Interface (HTTP Server)
+- **Client-Side PDF Text Extraction**: Integrates PDF.js to extract raw text directly inside browser memory, ensuring candidate resume data is processed locally without server persistence.
+- **Skill Gap Analysis**: Cross-references candidate skills against job requirements to highlight matched competencies and missing prerequisites.
+- **Algorithmic Match Scoring**: Calculates an objective match percentage (0-100%) based on skill overlap and job requirement density.
+- **Multi-Agent Processing Pipeline**:
+  - **Document Parser**: Extracts candidate identity details and document text.
+  - **Skill Matcher**: Scans and categorizes skills against a database of technical tools.
+  - **Candidate Evaluator**: Determines overall match score, strengths, and weaknesses.
+  - **Interview Specialist**: Formulates technical and behavioral interview questions targeted at candidate gaps.
+- **Hybrid AI & Fallback Engine**: Uses the Google Gemini 1.5 Flash API for semantic evaluation when online, and seamlessly falls back to a local heuristic parsing engine when offline.
+- **Hiring Recommendation Output**: Provides clear visual indicators (Strong Hire, Hire, Consider, Do Not Hire) alongside executive resume summaries.
+
+---
+
+## Tech Stack
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Document Processing**: PDF.js
+- **API Integration**: Google Gemini 1.5 Flash REST API
+- **Alternative Interface**: Python 3.11, Streamlit, PyPDF (`app.py`)
+
+---
+
+## Getting Started
+
+### Option 1: Web Application (HTTP Server)
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/sreeshnusa/ai-hr-recruitment-assistant.git
    cd ai-hr-recruitment-assistant
    ```
-2. Start local server:
+
+2. Start a local HTTP server:
    ```bash
    python -m http.server 8080
    ```
-3. Open browser at: **`http://localhost:8080`**
 
-### Option 2: Streamlit Dashboard (Python)
-1. Install dependencies:
+3. Open your browser and navigate to:
+   ```
+   http://localhost:8080
+   ```
+
+### Option 2: Streamlit Interface (Python)
+
+1. Install required dependencies:
    ```bash
    pip install streamlit pypdf
    ```
-2. Run the application:
+
+2. Launch the Streamlit dashboard:
    ```bash
    streamlit run app.py
    ```
 
 ---
 
-## 📂 Project Structure
+## Repository Structure
 
 ```text
 ai-hr-recruitment-assistant/
-├── index.html          # Main HTML UI structure
-├── style.css           # Modern design system & responsive layout
-├── app.js              # Multi-agent client-side execution engine
-├── app.py              # Streamlit python app alternative
-├── command.txt         # Sample Job Description (Data Analyst role)
-├── .gitignore          # Git exclusion rules
+├── index.html          # Primary user interface layout
+├── style.css           # Custom stylesheets and layout rules
+├── app.js              # Multi-agent execution engine and event handlers
+├── app.py              # Streamlit dashboard alternative
+├── command.txt         # Sample Job Description reference file
+├── .gitignore          # Version control exclusion rules
 └── README.md           # Project documentation
 ```
 
 ---
 
-## ⚙️ How It Works
+## Security & Data Privacy
 
-```mermaid
-flowchart LR
-    A["📄 Upload PDF"] --> B["⚙️ Client PDF.js Extract"]
-    B --> C["📝 Job Description"]
-    C --> D{"🤖 Agentic AI Engine"}
-    D --> E["📊 Match Score & Badges"]
-    D --> F["❓ Interview Questions"]
-```
+Candidate privacy is a key consideration in the system design:
+- All PDF text parsing is performed client-side inside browser memory.
+- Candidate files and personal identifiable information (PII) are not permanently stored on disk or third-party servers.
 
 ---
 
-## 🔒 Security & Data Privacy
+## Author
 
-- All document text processing occurs in **volatile browser RAM**.
-- No candidate resumes or personal identification details are stored in databases or permanent cloud storage.
-
----
-
-## 👤 Author
-
-Developed by **[Sreesh]**  
-- **GitHub**: [@sreeshnusa](https://github.com/sreeshnusa)
+Developed by **Sreesh**  
+GitHub: [https://github.com/sreeshnusa](https://github.com/sreeshnusa)
