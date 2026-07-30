@@ -1,0 +1,58 @@
+
+start http://localhost:8080
+
+Job Title
+
+Data Analyst
+
+Job Summary
+
+We are looking for a detail-oriented Data Analyst to collect, clean, analyze, and interpret data to support business decision-making. The ideal candidate should have strong analytical skills, proficiency in SQL and Excel, and experience with data visualization tools such as Power BI or Tableau.
+
+Key Responsibilities
+Collect data from multiple sources such as databases, spreadsheets, and business systems.
+Clean and validate data to ensure accuracy and consistency.
+Write SQL queries to extract and analyse data.
+Create dashboards and reports using Power BI or Tableau.
+Analyse trends, patterns, and business performance.
+Generate daily, weekly, and monthly reports.
+Present findings and recommendations to stakeholders.
+Work with different teams to understand business requirements.
+Monitor key performance indicators (KPIs).
+Identify opportunities to improve business processes using data.
+Required Skills
+Strong knowledge of SQL.
+Advanced Microsoft Excel skills (Pivot Tables, VLOOKUP/XLOOKUP, INDEX-MATCH, Charts).
+Experience with Power BI or Tableau.
+Basic knowledge of Python (Pandas, NumPy) is preferred.
+Understanding of statistics and data analysis techniques.
+Good problem-solving and analytical thinking.
+Strong communication and presentation skills.
+Attention to detail.
+Qualifications
+Bachelor's degree in Computer Science, Information Technology, Data Science, Statistics, Mathematics, Engineering, or a related field.
+Relevant internships or academic projects are an advantage.
+Preferred Skills
+Experience with relational databases such as MySQL or PostgreSQL.
+Knowledge of data cleaning and preprocessing.
+Basic understanding of machine learning concepts.
+Familiarity with Git or version control systems.
+Responsibilities in a Typical Day
+Extract data using SQL.
+Clean and prepare datasets.
+Create dashboards and visual reports.
+Analyse business performance.
+Attend meetings with stakeholders.
+Share insights and recommend improvements.
+Key Tools
+SQL
+Microsoft Excel
+Power BI
+Tableau
+Python
+MySQL/PostgreSQL
+Jupyter Notebook
+Career Level
+Entry-Level / Associate Data Analyst (0–2 years)
+Mid-Level Data Analyst (2–5 years)
+Senior Data Analyst (5+ years)

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI HR Recruitment Assistant</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Title Header -->
+    <header class="header">
+      <h1>AI HR Recruitment Assistant</h1>
+    </header>
+
+    <!-- Main Workspace Grid -->
+    <div class="workspace-grid">
+
+      <!-- LEFT COLUMN: Form Inputs -->
+      <div class="card">
+        
+        <!-- Upload Resume -->
+        <div class="form-group">
+          <label class="form-label">Upload Resume</label>
+          <div class="file-upload-box" id="fileUploadBox">
+            <button type="button" class="btn-choose" onclick="document.getElementById('resumeFileInput').click()">[ Choose PDF ]</button>
+            <span id="fileNameDisplay" class="file-name">No file selected</span>
+            <input type="file" id="resumeFileInput" accept=".pdf,.txt,.docx" style="display:none;">
+          </div>
+        </div>
+
+        <!-- Job Description -->
+        <div class="form-group">
+          <label for="jobDescriptionInput" class="form-label">Job Description</label>
+          <textarea 
+            id="jobDescriptionInput" 
+            rows="8" 
+            placeholder="Paste Job Description here..."
+          ></textarea>
+        </div>
+
+        <!-- Action Button -->
+        <button id="analyzeBtn" type="button" class="btn-analyze">
+          [ Analyse Resume ]
+        </button>
+
+      </div>
+
+      <!-- RIGHT COLUMN: Results Section -->
+      <div class="card" id="resultsCard">
+        
+        <!-- Placeholder before analysis -->
+        <div id="emptyPlaceholder" class="empty-placeholder">
+          <h3>Results</h3>
+          <p>Upload a resume and paste a Job Description, then click <strong>[ Analyse Resume ]</strong> to view analysis results.</p>
+        </div>
+
+        <!-- Actual Results View -->
+        <div id="resultsContent" style="display: none;">
+          <h2>Results</h2>
+
+          <div class="result-row">
+            <span class="field-label">Candidate Name:</span>
+            <span id="resCandidateName" class="field-val highlight-name">-</span>
+          </div>
+
+          <div class="result-row">
+            <span class="field-label">Match Score :</span>
+            <span id="resMatchScore" class="match-score-badge">82%</span>
+          </div>
+
+          <div class="result-row">
+            <span class="field-label">Recommendation :</span>
+            <span id="resRecommendation" class="recommendation-badge">Hire</span>
+          </div>
+
+          <div class="result-block">
+            <span class="field-label">Resume Summary</span>
+            <p id="resSummaryText" class="summary-box"></p>
+          </div>
+
+          <div class="result-block">
+            <span class="field-label">Skills</span>
+            <div id="resSkillsContainer" class="pills-container"></div>
+          </div>
+
+          <div class="result-block">
+            <span class="field-label">Missing Skills</span>
+            <div id="resMissingSkillsContainer" class="pills-container"></div>
+          </div>
+
+          <div class="split-grid">
+            <div class="result-block">
+              <span class="field-label green-label">Strengths</span>
+              <ul id="resStrengthsList" class="bullet-list green-bullets"></ul>
+            </div>
+
+            <div class="result-block">
+              <span class="field-label red-label">Weaknesses</span>
+              <ul id="resWeaknessesList" class="bullet-list red-bullets"></ul>
+            </div>
+          </div>
+
+          <hr class="section-divider">
+
+          <!-- Interview Questions -->
+          <h3>Interview Questions</h3>
+
+          <div class="question-section">
+            <h4 class="q-title">Technical</h4>
+            <ul id="resTechQuestionsList" class="bullet-list"></ul>
+          </div>
+
+          <div class="question-section">
+            <h4 class="q-title">HR</h4>
+            <ul id="resHrQuestionsList" class="bullet-list"></ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
